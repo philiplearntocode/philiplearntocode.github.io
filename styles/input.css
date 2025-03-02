@@ -17,6 +17,8 @@
   --color-our-work-bg-color: #fff7f1;
   --color-our-work-title-color: #604100;
   --color-visit-us-title: #3e3e3e;
+  --color-grey-filter: #EAEAEA;
+  --color-pagination-border: #BCBCBC;
 
   --translate-center: -50%, -50%;
 
@@ -27,6 +29,7 @@
   --font-pixelify: 'Pixelify Sans', sans-serif;
   --font-bebasnue: 'Bebas Neue', sans-serif;
   --font-inter: Inter, sans-serif;
+  --font-lato: "Lato", sans-serif;
 }
 
 /*

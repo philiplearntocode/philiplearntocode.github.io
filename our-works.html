@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./styles/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:opsz,wght@14..32,300&family=Oxanium:wght@200..800&family=Pixelify+Sans:wght@400..700&family=Roboto+Mono:wght@300&family=Strait&family=Work+Sans:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- TODO: separate this to manageable code -->
+  <!-- <script defer src="./script/script.js"></script> -->
+  <title>Auto Wrap Studio || Our Work</title>
+</head>
+
+
+<!-- TODO: separate this to manageable code -->
+
+<body class="bg-main-color">
+  <header id="header-bar" class="z-50	px-10 py-3 sticky top-0 bg-white">
+    <nav class="flex place-items-center">
+      <!-- Auto Wrap Studio Logo -->
+      <div class="flex-1">
+        <img class="rounded-lg w-[155px]" src="./assets/auto_wrap_studio_logo.png" alt="dummy image" />
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex flex-2 gap-12 place-content-center font-oxanium font-medium text-lg">
+        <!-- TODO: (P)  navigate to the section on every nav button -->
+        <button id="service-btn" class="inline-block relative before:content-[''] before:w-2/4 before:absolute before:left-1/4 before:bottom-[-3px] before:border-b before:border-border-main
+          transition-transform duration-200 hover:scale-110">
+          Services</button>
+        <button id="our-work-btn" class="inline-block relative before:content-[''] before:w-2/4 before:absolute before:left-1/4 before:bottom-[-3px] before:border-b before:border-border-main
+        transition-transform duration-200 hover:scale-110">
+          Our Work
+        </button>
+        <button id="visit-us-btn" class="inline-block relative before:content-[''] before:w-2/4 before:absolute before:left-1/4 before:bottom-[-3px] before:border-b before:border-border-main
+          transition-transform duration-200 hover:scale-110">
+          Visit Us</button>
+      </div>
+
+      <!-- Social Media Icons -->
+      <div class="flex grow gap-4 flex-1 place-content-end">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/auto_wrap_studio/" target="_blank">
+          <button type="button"
+            class="ig-button p-2.5 border border-border-main rounded-md shadow-lg shadow-gray-300 hover:shadow-gray-400 hover:border-aws-yellow hover:bg-amber-50 transition-transform duration-200 hover:scale-110">
+            <img class="ig-img w-4	h-4" src="./assets/icons/insta/insta_initial.svg" alt="Instagram">
+          </button>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/AutoWrapStudio/" target="_blank">
+          <button type="button"
+            class="fb-button p-2.5 border border-border-main rounded-md shadow-lg shadow-gray-300 hover:shadow-gray-400 hover:border-aws-yellow hover:bg-amber-50 transition-transform duration-200 hover:scale-110">
+            <img class="fb-img w-4 h-4" src="./assets/icons/fb/fb_initial.svg" alt="Facebook">
+          </button>
+        </a>
+
+        <!-- Tiktok -->
+        <a href="https://www.tiktok.com/@autowrapstudio99" target="_blank">
+          <button type="button"
+            class="tiktok-button p-2.5 border border-border-main rounded-md shadow-lg shadow-gray-300 hover:shadow-gray-400 hover:border-aws-yellow hover:bg-amber-50 transition-transform duration-200 hover:scale-110">
+            <img class="tiktok-img w-4 h-4" src="./assets/icons/tiktok/tiktok_initial.svg" alt="Tiktok">
+          </button>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://api.whatsapp.com/send?phone=60102523566" target="_blank">
+          <button
+            class="h-full whatsapp-button flex items-center gap-3 px-5 bg-black rounded-lg transition-transform duration-200 hover:scale-105">
+            <p class="text-white text-base">Contact Us</p>
+            <img id="whatsapp-img" class="w-4 h-4" src="./assets/icons/whatsapp/whatsapp_initial.svg" alt="WhatsApp">
+          </button>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="font-work-sans px-10 py-3">
+    <!-- Title headers -->
+    <div class="flex place-content-between items-center">
+      <div class=" font-semibold text-[80px]/20">Our<br>Works.</div>
+      <div class=" max-w-xl font-light text-base text-[#757575] h-fit">
+        At “Auto Wrap Studio”, we take pride in transforming vehicles with precision and style. Every car wrap—whether a
+        bold color change or custom branding—reflects our commitment to quality and detail.
+        <br><br>We bring our clients' visions to life with top materials and skilled craftsmanship, ensuring each wrap
+        is
+        built to last.
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="mt-6">
+      <p class="font-semibold">Series</p>
+      <div class="flex gap-2 mt-1">
+        <button class="bg-black px-10 py-1 rounded-[5px] text-white">All</button>
+        <button class="bg-white px-10 py-1 rounded-[5px] text-black border border-black">Gloss</button>
+        <button class="bg-white px-10 py-1 rounded-[5px] text-black border border-black">Matte</button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-4 mt-5">
+      <div class="w-full h-74 bg-no-repeat bg-center bg-cover rounded-[15px]"
+        style="background-image: url(./assets/dummy/services1.png);">
+      </div>
+      <div class="w-full h-74 bg-no-repeat bg-center bg-cover rounded-[15px]"
+        style="background-image: url(./assets/dummy/services1.png);">
+      </div>
+      <div class="w-full h-74 bg-no-repeat bg-center bg-cover rounded-[15px]"
+        style="background-image: url(./assets/dummy/services1.png);">
+      </div>
+      <div class="w-full h-74 bg-no-repeat bg-center bg-cover rounded-[15px]"
+        style="background-image: url(./assets/dummy/services1.png);">
+      </div>
+      <div class="w-full h-74 bg-no-repeat bg-center bg-cover rounded-[15px]"
+        style="background-image: url(./assets/dummy/services1.png);">
+      </div>
+      <div class="w-full h-74 bg-no-repeat bg-center bg-cover rounded-[15px]"
+        style="background-image: url(./assets/dummy/services1.png);">
+      </div>
+    </div>
+
+    <div class="flex mt-10 mb-12 justify-center">
+      <div class="inline-flex bg-white border-pagination-border border rounded-[10px]">
+        <button class="flex gap-2 border-r border-pagination-border px-4 py-2">
+          <img id="explore-more-icon" class="pointer-events-none" src="./assets/icons/arrow_left.svg" width="15px">
+          <p>Previous</p>
+        </button>
+        <div id="pagination-number" class="px-15 py-2">Page 1 of 1</div>
+        <button class="flex gap-2 border-l border-pagination-border px-5 py-2">
+          <p>Next</p>
+          <img id="explore-more-icon" class="pointer-events-none" src="./assets/icons/arrow_right.svg" width="15px">
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+
+</body>
+
+</html>

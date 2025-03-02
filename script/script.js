@@ -1,9 +1,24 @@
 var headerBar = document.getElementById('header-bar');
+
 window.addEventListener('scroll', (e) => {
   if (window.scrollY > 0) {
     headerBar.classList.add('shadow-2xl');
   } else {
     headerBar.classList.remove('shadow-2xl');
+  }
+});
+
+
+var autoWrapStudioLogo = document.getElementById('auto-wrap-studio-logo');
+
+autoWrapStudioLogo.addEventListener('click', (_) => {
+  // scroll to the most top
+  if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
+    // If already on index.html, scroll to the top
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
+    // Otherwise, go to index.html
+    window.location.href = "index.html";
   }
 });
 
@@ -25,6 +40,13 @@ function navButtonMouseOut(element) {
   element.classList.add(...normalUI);
 }
 
+function scrollToTopOfSection(elementId, extraPadding) {
+  // TODO: check on is on current page, else then navigate to the index page and scroll to section.
+  var top = headerBar.clientHeight;
+  var serviceSection = document.getElementById(elementId);
+  window.scrollTo({ top: serviceSection.offsetTop - top - extraPadding, behavior: "smooth" });
+}
+
 serviceBtn.addEventListener('mouseover', (_) => {
   navButtonMouseOver(serviceBtn);
 });
@@ -32,7 +54,7 @@ serviceBtn.addEventListener('mouseout', (_) => {
   navButtonMouseOut(serviceBtn);
 });
 serviceBtn.addEventListener('click', (_) => {
-  // TODO: navigate to service part
+  scrollToTopOfSection('services-section', 25);
 });
 
 ourWorkBtn.addEventListener('mouseover', (_) => {
@@ -42,7 +64,7 @@ ourWorkBtn.addEventListener('mouseout', (_) => {
   navButtonMouseOut(ourWorkBtn);
 });
 ourWorkBtn.addEventListener('click', (_) => {
-  // TODO: navigate to our work part
+  scrollToTopOfSection('our-works-section', 65);
 });
 
 visitUsBtn.addEventListener('mouseover', (_) => {
@@ -52,8 +74,26 @@ visitUsBtn.addEventListener('mouseout', (_) => {
   navButtonMouseOut(visitUsBtn);
 });
 visitUsBtn.addEventListener('click', (_) => {
-  // TODO: navigate to visit us part
+  scrollToTopOfSection('visit-us-section', 0);
 });
+
+var navSidebarBtn = document.getElementById('nav-sidebar-button');
+var navSideBar = document.getElementById('nav-sidebar');
+var navSideBarOverlay = document.getElementById('nav-sidebar-overlay');
+navSidebarBtn.addEventListener('click', (_) => {
+  openCloseNavSideBar();
+});
+navSideBarOverlay.addEventListener('click', (_) => {
+  openCloseNavSideBar();
+});
+
+function openCloseNavSideBar() {
+  navSideBarOverlay.classList.toggle('hidden');
+  navSideBar.classList.toggle('hidden');
+  navSideBar.classList.toggle('flex');
+  // navSideBar.classList.toggle('w-[175px]');
+}
+
 
 var igButton = document.getElementsByClassName('ig-button');
 var fbButton = document.getElementsByClassName('fb-button');
@@ -119,17 +159,21 @@ exploreMoreBtn.addEventListener('mouseout', (_) => {
   exploreMoreIcon.src = './assets/icons/arrow_right.svg';
 });
 
-
 ////////////////////
 /// CAROUSEL HERE
 ////////////////////
-var carouselSlider = document.getElementById('carousel-slider');
-var newHeight = window.innerHeight - headerBar.clientHeight;
-carouselSlider.style.height = newHeight + 'px';
+function calculateImgHeight() {
+  var carouselSlider = document.getElementById('carousel-slider');
+  var newHeight = window.innerHeight - headerBar.clientHeight;
+  carouselSlider.style.height = newHeight + 'px';
+}
+
+calculateImgHeight();
 
 var sliderContainer = document.getElementById('slider-container');
 var dotContainer = document.getElementById('dot-container');
 
+// TODO: replace carousel image here
 const carouselImgList = [
   './assets/dummy/carousel_test2.png',
   './assets/dummy/carousel_test1.png',
@@ -146,12 +190,10 @@ const dotActiveClass = Object.freeze({
   inactiveDotHeight: 'h-1',
 });
 
-var maxHeight = 0;
-
 for (let i = 0; i < carouselImgList.length; i++) {
   var imgChild = document.createElement("img");
   imgChild.id = `carousel-${i + 1}`;
-  imgChild.classList.add('flex-1', 'snap-start', 'object-cover', 'h-full', 'w-full');
+  imgChild.classList.add('flex-1', 'object-cover', 'h-full', 'w-full', 'min-w-full');
   imgChild.src = carouselImgList[i];
   sliderContainer.appendChild(imgChild);
 
@@ -221,6 +263,7 @@ for (let i = 0; i < dotContainer.children.length; i++) {
 
 window.addEventListener('resize', () => {
   reloadSlider();
+  calculateImgHeight();
 });
 
 var servicesContent = document.getElementsByClassName('service-content');
@@ -320,3 +363,7 @@ var copyrightText = document.getElementById('copyright-text');
 const d = new Date();
 var year = d.getFullYear();
 copyrightText.innerText = `Copyright © ${year} Auto Wrap Studio Sdn. Bhd. (business no.)`
+
+
+// TODO: make appear animation like panels.art
+// TODO: animate carousel index change
