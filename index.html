@@ -73,7 +73,6 @@
       <!-- Main Content -->
       <div
         class="hidden min-[850px]:flex min-[850px]:flex-2 min-[850px]:gap-10 place-content-center font-oxanium font-medium min-[850px]:text-lg">
-        <!-- TODO: (P)  navigate to the section on every nav button -->
         <button id="service-btn" class="inline-block relative before:content-[''] before:w-2/4 before:absolute before:left-1/4 before:bottom-[-3px] before:border-b before:border-border-main
           transition-transform duration-200 hover:scale-110">
           Services</button>
@@ -213,32 +212,43 @@
     </section>
 
     <!-- Our Work -->
-    <section id="our-works-section">
-      <div class="mt-40 min-h-[700px] bg-our-work-bg-color relative">
+    <section id="our-works-section" class="bg-our-work-bg-color min-h-screen">
+      <div class="mt-40 min-h-auto min-[960px]:min-h-[700px] relative">
         <img class="w-8 h-8 absolute -top-4 left-1/2 transform -translate-x-1/2" src="./assets/icons/gallery.svg"
           alt="Services">
-        <div class="absolute -top-12 flex items-end gap-6 px-12 max-h-[30%]">
-          <p class="text-[132px] text-our-work-title-color leading-[7.0rem] font-work-sans font-semibold">Our<br>Work.
-          </p>
-          <p class="font-robotomono text-base">Here showcases a gallery of photos highlighting our expertise in PPF
+        <div
+          class="min-[960px]:absolute min-[960px]:-top-12 flex flex-col min-[960px]:flex-row items-center pt-5 min-[960px]:pt-0 min-[960px]:items-end gap-6 px-12">
+          <p
+            class="text-7xl min-[960px]:text-[132px] text-our-work-title-color min-[960px]:leading-[7.0rem] font-work-sans font-semibold">
+            Our Work.</p>
+          <p class="font-robotomono max-[500px]:text-sm">Here showcases a gallery of photos highlighting our expertise
+            in PPF
             installation, vibrant car wraps, and custom designs. Each image reflects our commitment to quality and
             creativity, illustrating how we transform and protect vehicles.</p>
         </div>
 
-        <button id="explore-more-btn" onclick="location.href='our-works.html';"
-          class="absolute z-10 flex mx-12 px-14 justify-end items-center gap-2 p-2.5 border right-0 top-[27.5%] font-oxanium font-bold rounded-md border-black shadow-lg hover:text-white">
-          <p>Explore More</p>
-          <img id="explore-more-icon" class="pointer-events-none" src="./assets/icons/arrow_right.svg" alt="Services">
-        </button>
-        <div class="absolute min-h-[70%] bottom-0 w-full px-12">
-          <div class="absolute h-full w-1/4 bottom-0 bg-no-repeat bg-center bg-fit"
-            style="background-image: url(assets/dummy/services1.png);"></div>
-          <div class="absolute h-full w-1/4 left-[26.5%] -bottom-8 bg-no-repeat bg-center bg-fit"
-            style="background-image: url(assets/dummy/services2.png);"></div>
-          <div class="absolute h-full w-1/4 left-[50.5%] bottom-2 bg-no-repeat bg-center bg-fit"
-            style="background-image: url(assets/dummy/services3.png);"></div>
-          <div class="absolute h-full w-1/4 left-[70.5%] -bottom-12 bg-no-repeat bg-center bg-fit"
-            style="background-image: url(assets/dummy/services1.png);"></div>
+        <div class="flex flex-col">
+          <button id="explore-more-btn" onclick="location.href='our-works.html';"
+            class="max-[960px]:my-5 max-[700px]:w-max self-end min-[960px]:absolute min-[960px]:z-10 flex mx-12 px-14 gap-2 p-2.5 border min-[960px]:right-0 min-[960px]:top-[27.5%] font-oxanium font-bold rounded-md border-black shadow-lg hover:text-white">
+            <p>Explore More</p>
+            <img id="explore-more-icon" class="pointer-events-none" src="./assets/icons/arrow_right.svg" alt="Services">
+          </button>
+          <div
+            class="min-[960px]:block grid grid-cols-[repeat(auto-fit,_minmax(285px,_1fr))] gap-2 min-[960px]:absolute min-h-[70%] h-auto min-[960px]:bottom-0 w-full px-12 mb-7">
+            <div
+              class="min-[960px]:absolute block min-h-[300px] min-[960px]:h-full min-[960px]:w-1/4 min-[960px]:bottom-0 bg-no-repeat bg-center bg-fit"
+              style="background-image: url(assets/dummy/services1.png);">
+            </div>
+            <div
+              class="min-[960px]:absolute block min-h-[300px] min-[960px]:h-full min-[960px]:w-1/4 min-[960px]:left-[26.5%] min-[960px]:-bottom-8 bg-no-repeat bg-center bg-fit"
+              style="background-image: url(assets/dummy/services2.png);"></div>
+            <div
+              class="min-[960px]:absolute block min-h-[300px] min-[960px]:h-full min-[960px]:w-1/4 min-[960px]:left-[50.5%] min-[960px]:bottom-2 bg-no-repeat bg-center bg-fit"
+              style="background-image: url(assets/dummy/services3.png);"></div>
+            <div
+              class="min-[960px]:absolute block min-h-[300px] min-[960px]:h-full min-[960px]:w-1/4 min-[960px]:left-[70.5%] min-[960px]:-bottom-12 bg-no-repeat bg-center bg-fit"
+              style="background-image: url(assets/dummy/services1.png);"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -251,7 +261,7 @@
         <img class="w-8 h-8" src="./assets/icons/map_pin.svg" alt="Visit Us">
         <p class="mt-3 font-bold text-7xl font-work-sans inline-block relative text-visit-us-title">
           Visit Us.</p>
-        <p class="mt-4 text-center font-strait text-base">
+        <p class="mt-4 text-center font-strait text-sm max-[500px]:mx-4 min-[500px]:text-base">
           Come over & visit us! Here is where creativity meets craftsmanship.<br>
           Our friendly team is ready to help you discover the perfect wrap solution for<br> your vehicle, showcasing a
           range
@@ -259,15 +269,15 @@
           Stop by to discuss your ideas, see our work up close, and let us transform<br>your ride into a standout
           masterpiece!<br>
         </p>
+        <img class="mt-5 w-8 h-8 animate__animated animate__shakeY animate__delay-2s	 animate__slower animate__infinite"
+          src="./assets/icons/arrow_point_down.svg" alt="Visit Us">
         <div class="relative mt-5 flex gap-5 flex-col items-center">
-          <img class="w-8 h-8 animate__animated animate__shakeY animate__delay-2s	 animate__slower animate__infinite"
-            src="./assets/icons/arrow_point_down.svg" alt="Visit Us">
-          <iframe class="rounded-md shadow-xl shadow-gray-400"
+          <iframe
+            class="rounded-md shadow-xl shadow-gray-400 min-[700px]:w-[600px] min-[400px]:w-[400px] min-[700px]:h-[400px] min-[400px]:h-[300px]"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.200596688067!2d101.6203159!3d3.0408306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4b9b18419579%3A0x177872af0e41b0dc!2sAuto%20wrap%20studio!5e0!3m2!1sen!2smy!4v1736571669916!5m2!1sen!2smy"
-            width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
-          <div class="absolute -right-[5rem] top-10 flex flex-col gap-5">
+          <div class="md:absolute md:-right-[5rem] md:top-10 flex flex-row md:flex-col gap-5">
             <a href="https://www.waze.com/en-GB/live-map/directions/my/selangor/puchong/auto-wrap-studio?to=place.ChIJeZVBGJtLzDER3LBBDq9yeBc"
               target="_blank">
               <button type="button" class="waze-btn relative w-12 h-12 rounded-xl shadow-lg shadow-gray-300 hover:shadow-gray-400 transition-transform duration-200 hover:scale-110 before:absolute before:bg-stone-600 before:top-1/2 before:-right-2 before:transform before:-translate-y-1/2 before:translate-x-full
@@ -303,9 +313,9 @@
         47160 Puchong,<br>
         Selangor.
       </div>
-      <div class="grow flex justify-between">
+      <div class="grow flex max-[600px]:flex-col justify-between">
         <div class="flex flex-col gap-[0.1rem]">
-          <!-- TODO: add navigation to sections -->
+          <!-- TODO: add navigation to sections change to anchor tag -->
           <p class="font-semibold">Company</p>
           <div>
             <p class="font-light">Services</p>
@@ -333,8 +343,8 @@
       </div>
     </div>
     <div class="flex flex-row w-full items-center gap-14 mt-3">
-      <div class="flex-1 h-[1px] border-none bg-black/30"></div>
-      <div class="flex gap-6">
+      <div class="flex-1 h-[1px] border-none bg-black/30 max-[400px]:hidden"></div>
+      <div class="flex max-[400px]:grow gap-6 max-[400px]:justify-center">
         <!-- Instagram -->
         <a href="https://www.instagram.com/auto_wrap_studio/" target="_blank">
           <button type="button"
@@ -357,9 +367,9 @@
           </button>
         </a>
       </div>
-      <div class="flex-1 h-[1px] border-none bg-black/30"></div>
+      <div class="flex-1 h-[1px] border-none bg-black/30 max-[400px]:hidden"></div>
     </div>
-    <p id="copyright-text" class="self-center font-work-sans text-xs"></p>
+    <p id="copyright-text" class="self-center font-work-sans text-xs text-center"></p>
   </footer>
 </body>
 
