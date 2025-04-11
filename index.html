@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- TODO: handle only maximum to 1440 width -->
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -131,17 +133,34 @@
   </header>
 
   <!-- Carousel Photos -->
-  <section id="carousel-slider" class="overflow-hidden w-full max-w-[1600px] relative mr-auto ml-auto">
-    <div id="slider-container" class="absolute h-full w-full flex transition-all duration-1000"></div>
+  <!-- <section id="carousel-slider" class="overflow-hidden w-full relative mr-auto ml-auto">
+    <div id="slider-container" class="relative w-full flex transition-all duration-1000">
+      <div id="prev-btn"
+        class="bg-linear-to-r from-black/60 pl-5 to-black/0 z-10 absolute top-0 bottom-0 px-4 flex justify-center flex-col cursor-pointer">
+        <a class="text-6xl text-white select-none">❮</a>
+      </div>
+      <div id="next-btn"
+        class="bg-linear-to-r from-black/0 to-black/60 pr-5 z-10 absolute top-0 bottom-0 right-0 px-4 flex justify-center flex-col cursor-pointer">
+        <a class="text-6xl text-white select-none">❯</a>
+      </div>
+      <div id="dot-container" class="absolute bottom-4 flex gap-12 w-full justify-center items-end"></div>
+    </div>
+  </section> -->
+
+  <section id="carousel-slider" class="overflow-hidden w-full relative">
+    <div id="slider-container" class="w-full flex transition-all duration-1000"></div>
+
     <div id="prev-btn"
-      class="bg-linear-to-r from-black/60 to-black/0 z-10 absolute top-0 bottom-0 px-4 flex justify-center flex-col cursor-pointer">
-      <a class="text-6xl text-white select-none">❮</a>
+      class="absolute inset-y-0 left-0 flex items-center justify-center px-4 cursor-pointer bg-gradient-to-r from-black/60 to-transparent z-10 h-full">
+      <a class="text-4xl md:text-6xl text-white select-none">❮</a>
     </div>
+
     <div id="next-btn"
-      class="bg-linear-to-r from-black/0 to-black/60 z-10 absolute top-0 bottom-0 right-0 px-4 flex justify-center flex-col cursor-pointer">
-      <a class="text-6xl text-white select-none">❯</a>
+      class="absolute inset-y-0 right-0 flex items-center justify-center px-4 cursor-pointer bg-gradient-to-l from-black/60 to-transparent z-10 h-full">
+      <a class="text-4xl md:text-6xl text-white select-none">❯</a>
     </div>
-    <div id="dot-container" class="absolute bottom-4 flex gap-12 w-full justify-center items-end"></div>
+
+    <div id="dot-container" class="absolute bottom-4 flex gap-12 w-full justify-center items-center z-10 h-auto"></div>
   </section>
 
   <main class="w-full mt-10">
@@ -159,9 +178,9 @@
         </p>
       </div>
       <br>
+
       <div
-        class="my-4 grid max-[768px]:h-[800px] grid-cols-[repeat(1,_minmax(285px,_1fr))] md:flex gap-3 md:min-h-80 px-12">
-        <!-- PPF Installation -->
+        class="my-4 grid max-[768px]:h-[800px] grid-cols-[repeat(1,_minmax(285px,_1fr))] md:flex gap-3 md:min-h-80 px-2 md:px-12">
         <div
           class="service-content grow basis-0 shadow-lg relative rounded-2xl overflow-hidden bg-no-repeat bg-center bg-cover transition-all duration-100"
           style="background-image: url(./assets/dummy/services1.png);">
@@ -175,7 +194,6 @@
           </div>
         </div>
 
-        <!-- Car Wrap -->
         <div
           class="service-content grow basis-0 shadow-lg relative rounded-2xl overflow-hidden bg-no-repeat bg-center bg-cover transition-all duration-100"
           style="background-image: url(./assets/dummy/services2.png);">
@@ -190,7 +208,6 @@
           </div>
         </div>
 
-        <!-- Custom Wrap Design -->
         <div
           class="service-content grow basis-0 shadow-lg relative rounded-2xl overflow-hidden bg-no-repeat bg-center bg-cover transition-all duration-100"
           style="background-image: url(./assets/dummy/services3.png);">
@@ -209,6 +226,7 @@
           </div>
         </div>
       </div>
+
     </section>
 
     <!-- Our Work -->
@@ -234,7 +252,7 @@
             <img id="explore-more-icon" class="pointer-events-none" src="./assets/icons/arrow_right.svg" alt="Services">
           </button>
           <div
-            class="min-[960px]:block grid grid-cols-[repeat(auto-fit,_minmax(285px,_1fr))] gap-2 min-[960px]:absolute min-h-[70%] h-auto min-[960px]:bottom-0 w-full px-12 mb-7">
+            class="min-[960px]:block grid grid-cols-[repeat(auto-fit,_minmax(255px,_1fr))] gap-2 min-[960px]:absolute min-h-[70%] h-auto min-[960px]:bottom-0 w-full px-2 min-[450px]:px-12 mb-7">
             <div
               class="min-[960px]:absolute block min-h-[300px] min-[960px]:h-full min-[960px]:w-1/4 min-[960px]:bottom-0 bg-no-repeat bg-center bg-fit"
               style="background-image: url(assets/dummy/services1.png);">

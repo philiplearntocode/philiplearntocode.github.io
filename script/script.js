@@ -162,23 +162,25 @@ exploreMoreBtn.addEventListener('mouseout', (_) => {
 ////////////////////
 /// CAROUSEL HERE
 ////////////////////
-function calculateImgHeight() {
-  var carouselSlider = document.getElementById('carousel-slider');
-  var newHeight = window.innerHeight - headerBar.clientHeight;
-  carouselSlider.style.height = newHeight + 'px';
-}
-
-calculateImgHeight();
 
 var sliderContainer = document.getElementById('slider-container');
 var dotContainer = document.getElementById('dot-container');
 
+function calculateImgHeight() {
+  if (window.outerWidth < 1450) {
+    if (sliderContainer.style.height) sliderContainer.style.height = '';
+    return;
+  }
+  var newHeight = window.innerHeight - headerBar.clientHeight;
+  sliderContainer.style.height = `${newHeight}px`;
+}
+
 // TODO: replace carousel image here
 const carouselImgList = [
   './assets/dummy/carousel_test2.png',
-  './assets/dummy/carousel_test1.png',
   './assets/dummy/carousel_test2.png',
-  './assets/dummy/carousel_test1.png',
+  './assets/dummy/carousel_test2.png',
+  './assets/dummy/carousel_test2.png',
 ];
 
 var carouselDisplayIndex = 0;
@@ -193,12 +195,13 @@ const dotActiveClass = Object.freeze({
 for (let i = 0; i < carouselImgList.length; i++) {
   var imgChild = document.createElement("img");
   imgChild.id = `carousel-${i + 1}`;
-  imgChild.classList.add('flex-1', 'object-cover', 'h-full', 'w-full', 'min-w-full');
+  // TODO: (P) make another type of image here. for mobile size.
+  imgChild.classList.add('flex-1', 'object-cover', 'min-[425px]:h-full', 'h-svh', 'w-full', 'min-w-full');
   imgChild.src = carouselImgList[i];
   sliderContainer.appendChild(imgChild);
 
   var dotChild = document.createElement("span");
-  dotChild.classList.add('w-40', 'transition-all', 'duration-300', 'ease-in-out', 'cursor-pointer');
+  dotChild.classList.add('w-[clamp(20px,10vw,140px)]', 'transition-all', 'duration-300', 'ease-in-out', 'cursor-pointer');
 
   if (carouselDisplayIndex == i) {
     dotChild.classList.add(dotActiveClass.activeDotColor, dotActiveClass.activeDotHeight);
@@ -260,6 +263,10 @@ for (let i = 0; i < dotContainer.children.length; i++) {
     reloadSlider();
   });
 }
+
+window.addEventListener('load', () => {
+  calculateImgHeight();
+});
 
 window.addEventListener('resize', () => {
   reloadSlider();
