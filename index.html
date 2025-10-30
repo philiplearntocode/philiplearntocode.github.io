@@ -10,7 +10,7 @@
   <link href="./styles/output.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:opsz,wght@14..32,300&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oxanium:wght@200..800&family=Pixelify+Sans:wght@400..700&family=Roboto+Mono:wght@300&family=Strait&family=Work+Sans:wght@100..900&display=swap"
@@ -22,43 +22,44 @@
 
 <body class="bg-main-color">
   <div id="nav-sidebar-overlay" class="hidden fixed z-40 h-full w-full bg-black/55"></div>
+  <!-- max-w-[1440px] mx-auto w-full -->
 
   <div id="nav-sidebar"
-    class="hidden z-50 fixed h-fit w-[180px] top-0 right-0 rounded-md bg-white py-6 px-4 flex-col gap-4 font-lato text-base tracking-wide font-medium transition-transform duration-300">
+    class="hidden z-50 fixed h-full w-[clamp(200px, 50vw, 300px)] top-0 right-0 bg-white py-6 px-4 flex-col gap-4 font-lato text-base tracking-wide font-medium transition-transform duration-300">
     <a class="flex gap-3 items-center" href="#">
-      <img class="w-7 h-7 p-1.25 border-none rounded-full shadow-sm shadow-gray-950/30"
-        src="./assets/icons/work_tool.svg" alt="Services Logo">
+      <!-- <img class="w-7 h-7 p-1.25 border-none rounded-full shadow-sm shadow-gray-950/30"
+        src="./assets/icons/work_tool.svg" alt="Services Logo"> -->
       <p>Services</p>
     </a>
     <a class="flex gap-3 items-center" href="#">
-      <img class="w-7 h-7 p-1.25 border-none rounded-full shadow-sm shadow-gray-950/30" src="./assets/icons/gallery.svg"
-        alt="Our Works Logo">
+      <!-- <img class="w-7 h-7 p-1.25 border-none rounded-full shadow-sm shadow-gray-950/30" src="./assets/icons/gallery.svg"
+        alt="Our Works Logo"> -->
       <p>Our Works</p>
     </a>
     <a class="flex gap-3 items-center" href="#">
-      <img class="w-7 h-7 p-1.25 border-none rounded-full shadow-sm shadow-gray-950/30" src="./assets/icons/map_pin.svg"
-        alt="Visit Us Logo">
+      <!-- <img class="w-7 h-7 p-1.25 border-none rounded-full shadow-sm shadow-gray-950/30" src="./assets/icons/map_pin.svg"
+        alt="Visit Us Logo"> -->
       <p>Visit Us</p>
     </a>
     <div class="h-[1px] border-none bg-black/10"></div>
     <a class="flex gap-3 items-center" href="#">
-      <img class="w-7 h-7 p-1.25 border-none rounded-full shadow-sm shadow-gray-950/30"
-        src="./assets/icons/whatsapp/whatsapp_black.svg" alt="WhatsApp Logo">
+      <!-- <img class="w-7 h-7 p-1.25 border-none rounded-full shadow-sm shadow-gray-950/30"
+        src="./assets/icons/whatsapp/whatsapp_black.svg" alt="WhatsApp Logo"> -->
       <p>Contact Us</p>
     </a>
     <a class="flex gap-3 items-center" href="#">
-      <img class="w-7 h-7 p-1.25 border-none overflow-visible rounded-full shadow-sm shadow-gray-950/30"
-        src="./assets/icons/insta/insta_initial.svg" alt="Instagram Logo">
+      <!-- <img class="w-7 h-7 p-1.25 border-none overflow-visible rounded-full shadow-sm shadow-gray-950/30"
+        src="./assets/icons/insta/insta_initial.svg" alt="Instagram Logo"> -->
       <p>Instagram</p>
     </a>
     <a class="flex gap-3 items-center" href="#">
-      <img class="w-7 h-7 p-1.25 border-none rounded-full shadow-sm shadow-gray-950/30"
-        src="./assets/icons/fb/fb_initial.svg" alt="Facebook Logo">
+      <!-- <img class="w-7 h-7 p-1.25 border-none rounded-full shadow-sm shadow-gray-950/30"
+        src="./assets/icons/fb/fb_initial.svg" alt="Facebook Logo"> -->
       <p>Facebook</p>
     </a>
     <a class="flex gap-3 items-center" href="#">
-      <img class="w-7 h-7 p-1.25 border-none rounded-full shadow-sm shadow-gray-950/30"
-        src="./assets/icons/tiktok/tiktok_initial.svg" alt="Tiktok Logo">
+      <!-- <img class="w-7 h-7 p-1.25 border-none rounded-full shadow-sm shadow-gray-950/30"
+        src="./assets/icons/tiktok/tiktok_initial.svg" alt="Tiktok Logo"> -->
       <p>Tiktok</p>
     </a>
   </div>
@@ -68,7 +69,7 @@
       <!-- Auto Wrap Studio Logo -->
       <div class="flex-1">
         <button id="auto-wrap-studio-logo" class="flex-none">
-          <img class="rounded-lg w-[130px]" src="./assets/auto_wrap_studio_logo.png" alt="dummy image" />
+          <img class="rounded-lg w-[140px]" src="./assets/auto_wrap_studio_logo.png" alt="dummy image" />
         </button>
       </div>
 
@@ -307,7 +308,7 @@
             </a>
             <a href="https://maps.app.goo.gl/EJPZzgye3GWMyDCN7" target="_blank">
               <button type="button"
-                class="google-map-btn relative w-12 h-12 p-2 border bg-white rounded-xl shadow-lg shadow-gray-300 hover:shadow-gray-400 transition-transform duration-200 hover:scale-110 before:absolute before:bg-stone-600 max-[1070px]:before:-bottom-full min-[1070px]:before:top-1/2 min-[1070px]:before:-right-2 before:transform before:-translate-y-1/2 before:-translate-x-1/2 min-[1070px]:before:translate-x-ful before:content-['Go_via_Google_Map'] before:text-white before:w-max before:p-1.5 before:text-xs before:rounded-md before:scale-0 before:transition-transform before:duration-200 before:origin-top min-[1070px]:before:origin-left hover:before:scale-100">
+                class="google-map-btn relative w-12 h-12 p-2 border bg-white rounded-xl shadow-lg shadow-gray-300 hover:shadow-gray-400 transition-transform duration-200 hover:scale-110 before:absolute before:bg-stone-600 max-[1070px]:before:-bottom-full min-[1070px]:before:top-1/2 min-[1070px]:before:-right-2 before:transform before:-translate-y-1/2 before:-translate-x-1/2 min-[1070px]:before:translate-x-full before:content-['Go_via_Google_Map'] before:text-white before:w-max before:p-1.5 before:text-xs before:rounded-md before:scale-0 before:transition-transform before:duration-200 before:origin-top min-[1070px]:before:origin-left hover:before:scale-100">
                 <img id="google-map-img" class="h-full w-full" src="./assets/icons/google_map.svg" alt="Google Map">
               </button>
             </a>

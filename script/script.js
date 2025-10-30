@@ -80,12 +80,16 @@ visitUsBtn.addEventListener('click', (_) => {
 var navSidebarBtn = document.getElementById('nav-sidebar-button');
 var navSideBar = document.getElementById('nav-sidebar');
 var navSideBarOverlay = document.getElementById('nav-sidebar-overlay');
+
 navSidebarBtn.addEventListener('click', (_) => {
   openCloseNavSideBar();
 });
+
 navSideBarOverlay.addEventListener('click', (_) => {
   openCloseNavSideBar();
 });
+
+// TODO: add on when resize too (if needed)
 
 function openCloseNavSideBar() {
   navSideBarOverlay.classList.toggle('hidden');
@@ -196,7 +200,7 @@ for (let i = 0; i < carouselImgList.length; i++) {
   var imgChild = document.createElement("img");
   imgChild.id = `carousel-${i + 1}`;
   // TODO: (P) make another type of image here. for mobile size.
-  imgChild.classList.add('flex-1', 'object-cover', 'min-[425px]:h-full', 'h-svh', 'w-full', 'min-w-full');
+  imgChild.classList.add('flex-1', 'object-cover', 'min-[426px]:h-full', 'h-svh', 'w-full', 'min-w-full');
   imgChild.src = carouselImgList[i];
   sliderContainer.appendChild(imgChild);
 

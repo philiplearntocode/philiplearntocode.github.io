@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <!-- TODO: separate this to manageable code -->
   <!-- <script defer src="./script/script.js"></script> -->
-  <title>Auto Wrap Studio || Our Work</title>
+  <title>Auto Wrap Studio - Our Works</title>
 </head>
 
 
@@ -82,64 +82,150 @@
   </header>
 
 
-  <section class="font-work-sans px-10 py-3">
-    <!-- Title headers -->
-    <div class="flex place-content-between items-center">
-      <div class=" font-semibold text-[80px]/20">Our<br>Works.</div>
-      <div class=" max-w-xl font-light text-base text-[#757575] h-fit">
-        At “Auto Wrap Studio”, we take pride in transforming vehicles with precision and style. Every car wrap—whether a
-        bold color change or custom branding—reflects our commitment to quality and detail.
-        <br><br>We bring our clients' visions to life with top materials and skilled craftsmanship, ensuring each wrap
-        is
-        built to last.
+  <main class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
+      <div>
+        <h1 class="text-7xl md:text-8xl font-black text-gray-900 dark:text-white tracking-tighter">Our<br />Works.
+        </h1>
+      </div>
+      <div class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+        <p>At "Auto Wrap Studio", we take pride in transforming vehicles with precision and style. Every car
+          wrap—whether a bold color change or custom branding—reflects our commitment to quality and
+          detail.</p>
+        <p class="mt-4">We bring our clients' visions to life with top materials and skilled craftsmanship,
+          ensuring each wrap is built to last.</p>
       </div>
     </div>
-
-    <!-- Filters -->
-    <div class="mt-6">
-      <p class="font-semibold">Series</p>
-      <div class="flex gap-2 mt-1">
-        <button class="bg-black px-10 py-1 rounded-[5px] text-white">All</button>
-        <button class="bg-white px-10 py-1 rounded-[5px] text-black border border-black">Gloss</button>
-        <button class="bg-white px-10 py-1 rounded-[5px] text-black border border-black">Matte</button>
+    <div class="flex flex-col md:flex-row gap-8">
+      <aside class="w-full md:w-1/4 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md h-fit">
+        <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">Filters</h3>
+        <div class="mb-6">
+          <h4 class="text-lg font-medium text-gray-800 dark:text-gray-200 mb-3">Wrap Type</h4>
+          <div class="space-y-2">
+            <label class="flex items-center">
+              <input class="form-checkbox text-primary rounded" type="checkbox" value="gloss" />
+              <span class="ml-2 text-gray-700 dark:text-gray-300">Gloss</span>
+            </label>
+            <label class="flex items-center">
+              <input class="form-checkbox text-primary rounded" type="checkbox" value="matte" />
+              <span class="ml-2 text-gray-700 dark:text-gray-300">Matte</span>
+            </label>
+            <label class="flex items-center">
+              <input class="form-checkbox text-primary rounded" type="checkbox" value="satin" />
+              <span class="ml-2 text-gray-700 dark:text-gray-300">Satin</span>
+            </label>
+            <label class="flex items-center">
+              <input class="form-checkbox text-primary rounded" type="checkbox" value="chrome" />
+              <span class="ml-2 text-gray-700 dark:text-gray-300">Chrome</span>
+            </label>
+            <label class="flex items-center">
+              <input class="form-checkbox text-primary rounded" type="checkbox" value="metallic" />
+              <span class="ml-2 text-gray-700 dark:text-gray-300">Metallic</span>
+            </label>
+          </div>
+        </div>
+        <div class="mb-6">
+          <h4 class="text-lg font-medium text-gray-800 dark:text-gray-200 mb-3">Car Model</h4>
+          <div class="space-y-2">
+            <label class="flex items-center">
+              <input class="form-checkbox text-primary rounded" type="checkbox" value="sedan" />
+              <span class="ml-2 text-gray-700 dark:text-gray-300">Sedan</span>
+            </label>
+            <label class="flex items-center">
+              <input class="form-checkbox text-primary rounded" type="checkbox" value="coupe" />
+              <span class="ml-2 text-gray-700 dark:text-gray-300">Coupe</span>
+            </label>
+            <label class="flex items-center">
+              <input class="form-checkbox text-primary rounded" type="checkbox" value="suv" />
+              <span class="ml-2 text-gray-700 dark:text-gray-300">SUV</span>
+            </label>
+            <label class="flex items-center">
+              <input class="form-checkbox text-primary rounded" type="checkbox" value="truck" />
+              <span class="ml-2 text-gray-700 dark:text-gray-300">Truck</span>
+            </label>
+            <label class="flex items-center">
+              <input class="form-checkbox text-primary rounded" type="checkbox" value="sports-car" />
+              <span class="ml-2 text-gray-700 dark:text-gray-300">Sports Car</span>
+            </label>
+          </div>
+        </div>
+        <button
+          class="w-full bg-primary text-white py-2 px-4 rounded-lg font-semibold hover:bg-gray-800 dark:hover:bg-gray-700 transition-colors">Apply
+          Filters</button>
+      </aside>
+      <div class="w-full md:w-3/4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="overflow-hidden rounded-lg bg-white dark:bg-gray-800 shadow-md">
+            <img alt="Rear view of a wrapped Lexus IS 300"
+              class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWSkdvZYOecbHRxYgfYe29OxNgMoULAidHabwG4QVy54bdGRrNv_FnfkeUcxWCuK_kHYqALGRgmz0ijzeRKpcrmvPUAf0aCbdE93DnKVHEFwnvDb9SbQNK5V1n5x8yvimOxQzGQ7G-kb31gmrBN4Ka_PKjyYoLaGJdPwshCKHfFV1iFCaygFXeDtSQdwnC2MsdvJdv_CbtceoevjgMaZJNHpPF_VuMxm-htIIawG0iaGpmvlh-WScKvHWWTyR9rsq8BoqwEjk_l2AS" />
+            <div class="p-4">
+              <p class="text-sm font-semibold text-gray-900 dark:text-white">Lexus IS 300</p>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Wrap Type: Matte</p>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-lg bg-white dark:bg-gray-800 shadow-md">
+            <img alt="Rear three-quarter view of a wrapped Lexus IS 300"
+              class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK0Ohn6B47dtAZKfoeA8uasE4yM4xiqmNPfPQbCZAXRg21a6NwG4g6Fj8znItOUhJwYLww2D7BhtIMEmd5oByFRdQgefTDpQETnzOVenSLuPMSWm6Q4QXewQ2iSkDcQsSo_XoECk8QPNIrpd56ms5J8sjd2NiXG06YI9WfPGp6Q3Tas-yAMei8vt2DOTN4nI12BqTJwEEA5UC1VeIhw5V4BBQMo27IlyzqRq6JTZbqW-z-2SmQDMKaYTK8f7TH5qKptwBSRbuuiZMC" />
+            <div class="p-4">
+              <p class="text-sm font-semibold text-gray-900 dark:text-white">Lexus IS 300</p>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Wrap Type: Gloss</p>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-lg bg-white dark:bg-gray-800 shadow-md">
+            <img alt="Side view of a wrapped Lexus IS 300"
+              class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyBWqJU2GdnjFKowjI63EEjYrumgZypF0NEyApJ8aJ6MRGEbO2aGTnnfDV8bQYTJ_ssyaHr8OibvZNbVErlFBrvEOiDJzKRqgh8KrWLOvY5Ns7AVl2GhxZIMZOsdyWzYr-Fed0jys4Z_0EplZsEVkgCGxNxeToAPm3z9joBBzJDOrKcsPZ0ljQdy-2xfgcq3pWLdLsc2SG4iTr3LTJZ7Z5oYnGy-F3zExDqnIpjynmvnnUSOhFdWdjio3Ztg0SvVSl562-vgdzhPWY" />
+            <div class="p-4">
+              <p class="text-sm font-semibold text-gray-900 dark:text-white">Lexus IS 300</p>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Wrap Type: Satin</p>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-lg bg-white dark:bg-gray-800 shadow-md">
+            <img alt="Front view of a wrapped Lexus IS 300 in a parking lot"
+              class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyaKDj8OmjRnmQCO2UhbGOH6IYeQehsGfkElXDB7JqWSUxfWp-aWH3CXXxcWMGFrfKNslTd73ZlVPJRcP71JMzepLtyWvdwxGLV1-5Nun2vfSCjz_2R9q_fDxZGqDz9_CXqb2dQxULttENZV0R1cC6xAfcqwMPTvQC8LLKrsIgX01s9JYTo_iRpEkQCNVwFuNdxoIwZG2ZO4LKQIuxwIBnVSuRxGkOQIyCAp168BoVcE21nDtDKabcKz7f_Q4UkbrN2jMXVwmhWvnj" />
+            <div class="p-4">
+              <p class="text-sm font-semibold text-gray-900 dark:text-white">Lexus IS 300</p>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Wrap Type: Chrome</p>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-lg bg-white dark:bg-gray-800 shadow-md">
+            <img alt="Front three-quarter view of a wrapped Lexus IS 300"
+              class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMFaDOEs8IxlwjPb3yOzWaOWKcRWS3ugfUctz9Ezwdmo0Dzl7C9pLhCcr1A33tFfOmLwmQ_vlbIg35Gt3UfuNYnlFR6EuFbjpvvwpdaN8NDyN0lUDz7LSgv5iiQ3RsBa6JUtqkCg2tk_Np8Ik57D8B7GFVEl-szcb38ZTT6jdBPpLET3WEjMJW8mDfMuhGbfV2rvqL8O0V7W4dM2TOB9xeStQEmRPkPO2NiOzZV33smw4MURUR17wKvxj0XYM3VGFbeZyxfWp8UvzV" />
+            <div class="p-4">
+              <p class="text-sm font-semibold text-gray-900 dark:text-white">Lexus IS 300</p>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Wrap Type: Metallic</p>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-lg bg-white dark:bg-gray-800 shadow-md">
+            <img alt="Close-up of the front of a wrapped Lexus IS 300"
+              class="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAid9OfJa24HTE8KUbHa6I9gLwcC0hBEr22TIn1CoXSnz0YdCptap2kFraAYxPtY34A8TlYnxfsprb-5OiXkam15_J1nwWzUgT2LRq_TB3U4HB94_DHfCG2qFXh5iiWpgr1ABq-ZXIYheHiDA_IqM9JOmYCK2hquV_v5BJXkXXPWJ9I9hgmcY8a-yN9Sp4MBN_t2g7Os_a3sZTSSft_8RAKasjoeKy2xqdBDzMpZSGcQKdukT704L-cHmHJwkhCb0JfI-pGWy2Brmax" />
+            <div class="p-4">
+              <p class="text-sm font-semibold text-gray-900 dark:text-white">Lexus IS 300</p>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Wrap Type: Gloss</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center mt-16 space-x-4">
+          <button
+            class="flex items-center space-x-2 py-2 px-4 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            <span class="material-icons text-lg">arrow_back</span>
+            <span>Previous</span>
+          </button>
+          <span class="text-gray-700 dark:text-gray-300">Page 1 of 10</span>
+          <button
+            class="flex items-center space-x-2 py-2 px-4 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            <span>Next</span>
+            <span class="material-icons text-lg">arrow_forward</span>
+          </button>
+        </div>
       </div>
     </div>
-
-    <div class="grid grid-cols-3 gap-4 mt-5">
-      <div class="w-full h-74 bg-no-repeat bg-center bg-cover rounded-[15px]"
-        style="background-image: url(./assets/dummy/services1.png);">
-      </div>
-      <div class="w-full h-74 bg-no-repeat bg-center bg-cover rounded-[15px]"
-        style="background-image: url(./assets/dummy/services1.png);">
-      </div>
-      <div class="w-full h-74 bg-no-repeat bg-center bg-cover rounded-[15px]"
-        style="background-image: url(./assets/dummy/services1.png);">
-      </div>
-      <div class="w-full h-74 bg-no-repeat bg-center bg-cover rounded-[15px]"
-        style="background-image: url(./assets/dummy/services1.png);">
-      </div>
-      <div class="w-full h-74 bg-no-repeat bg-center bg-cover rounded-[15px]"
-        style="background-image: url(./assets/dummy/services1.png);">
-      </div>
-      <div class="w-full h-74 bg-no-repeat bg-center bg-cover rounded-[15px]"
-        style="background-image: url(./assets/dummy/services1.png);">
-      </div>
-    </div>
-
-    <div class="flex mt-10 mb-12 justify-center">
-      <div class="inline-flex bg-white border-pagination-border border rounded-[10px]">
-        <button class="flex gap-2 border-r border-pagination-border px-4 py-2">
-          <img id="explore-more-icon" class="pointer-events-none" src="./assets/icons/arrow_left.svg" width="15px">
-          <p>Previous</p>
-        </button>
-        <div id="pagination-number" class="px-15 py-2">Page 1 of 1</div>
-        <button class="flex gap-2 border-l border-pagination-border px-5 py-2">
-          <p>Next</p>
-          <img id="explore-more-icon" class="pointer-events-none" src="./assets/icons/arrow_right.svg" width="15px">
-        </button>
-      </div>
-    </div>
-  </section>
+  </main>
 
 
 
